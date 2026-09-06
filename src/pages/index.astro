@@ -2,6 +2,7 @@
 import BaseHead from '../components/BaseHead.astro';
 import Hero from '../components/Hero.astro';			
 import Header from '../components/Header.astro';
+import Analytics from '@vercel/analytics/astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 ---
 
@@ -13,5 +14,6 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 	<body class="">
 		<Header/>
 		<Hero/>
+		<Analytics />
 	</body>
 </html>
