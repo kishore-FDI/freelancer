@@ -10,7 +10,7 @@ export default defineConfig({
       vite: {
         plugins: [tailwindcss()],
     },
-    integrations: [mdx(), sitemap(), icon()],
+    integrations: [mdx(), sitemap()],
     fonts: [
         {
             provider: fontProviders.local(),
