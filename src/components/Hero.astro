@@ -1,11 +1,34 @@
----
----
-<section class="flex items-center justify-center gap-10 my-20 font-">
-    <div class="text-left font-mono">
-        I'm Kishore --<br>
-        labels don't define me <br>
-        Worked in retail sales for a decade. <br>
-          
-    </div>
-    <img src="/Hero.png" alt="" class="size-[max(20vw,20vh)]">
+<section class="mx-auto my-20 grid w-fit gap-5 justify-items-stretch font-mono text-wrap">
+    <section class="flex items-center justify-center">
+        <div class="text-left font-mono">
+            I'm Kishore --
+            <br />
+            labels don't define me <br />I try whatever strikes my mood
+        </div>
+        <img src="/Hero.png" alt="" class="size-[max(20vw,20vh)]" />
+    </section>
+    <section class="w-0 min-w-full">
+        From buildings at 3 AM to handling sales in peak hours, I love doing
+        everything. <br />
+        Currently contributing to{" "}
+        <a
+            href="https://www.nexlevr.app/?utm_source=kishorekumar.tech&utm_medium=referral&utm_campaign=nexlevr"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-nexlevr-link
+        >
+            Try Nexlevr
+        </a>
+        <script>
+            import { track } from "@vercel/analytics";
+
+            document.querySelectorAll("[data-nexlevr-link]").forEach((link) => {
+                link.addEventListener("click", () => {
+                    track("Nexlevr Click", {
+                        location: "homepage",
+                    });
+                });
+            });
+        </script>
+    </section>
 </section>
