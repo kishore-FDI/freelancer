@@ -1,0 +1,17 @@
+---
+const goalKm = 100;
+const goalHours = 12;
+const bestKm = 11;
+const bestHours = 1.75;
+
+const pct = Math.round((bestKm / goalKm) * 100);
+---
+
+<div class="my-2">
+    Running: <strong>{bestKm}km</strong> in {bestHours}h — goal is {goalKm}km in{" "}
+    {goalHours}h
+    <div class="mt-1 h-3 w-full max-w-md border border-black">
+        <div class="h-full bg-green-700" style={`width: ${pct}%`}></div>
+    </div>
+    <span class="text-sm">{pct}% there</span>
+</div>
