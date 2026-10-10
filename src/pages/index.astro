@@ -1,19 +1,21 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Hero from '../components/Hero.astro';			
-import Header from '../components/Header.astro';
-import Analytics from '@vercel/analytics/astro';
-import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import BaseHead from "../components/SeoComponents/BaseHead.astro";
+import Hero from "../components/GroupComponents/Hero.astro";
+import Header from "../components/GroupComponents/Header.astro";
+import Analytics from "@vercel/analytics/astro";
+import About from "../components/GroupComponents/About.astro";
+import { SITE_DESCRIPTION, SITE_TITLE } from "../components/Data/consts";
+import "../styles/global.css";
+import Blog from "../components/GroupComponents/GlobalPageLayout.astro";
 ---
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body class="">
-		<Header/>
-		<Hero/>
-		<Analytics />
-	</body>
-</html>
+<Blog title={SITE_TITLE} description={SITE_DESCRIPTION}>
+    <section class="mx-auto my-20 grid w-fit gap-5 justify-items-stretch font-mono text-wrap">
+        <Hero />
+        <section class="mt-2.5"></section>
+        <hr />
+        <section class="mt-2.5"></section>
+        <About />
+        <Analytics />
+    </section>
+</Blog>

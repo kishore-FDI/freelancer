@@ -1,0 +1,31 @@
+---
+import { BLOG_META_DATA } from "../Data/blog-data";
+
+const blogs = [...BLOG_META_DATA].sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
+);
+
+const formatDate = (d: string) =>
+    new Date(d).toLocaleDateString("en-IN", {
+        day: "numeric",
+        month: "short",
+        year: "numeric",
+    });
+---
+
+<div class="w-0 min-w-full">
+    {blogs.map((i) => (
+        <a href={`/blog/${i.slug}`} class="my-5 block">
+            <div class="grid grid-cols-[10.5rem_minmax(0,1fr)] gap-6 items-center">
+                <img src={i.image} alt={i.title} class="size-30" />
+                <div class="flex min-w-0 flex-col justify-center gap-1 break-words">
+                    <div>{i.title}</div>
+                    <div>{i.description}</div>
+                    <div class="text-sm opacity-60">
+                        {formatDate(i.date)} · {i.readTime}
+                    </div>
+                </div>
+            </div>
+        </a>
+    ))}
+</div>

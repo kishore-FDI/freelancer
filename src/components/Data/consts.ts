@@ -6,6 +6,6 @@ export const SITE_DESCRIPTION = 'Statmaxxing in my 20s';
 
 export const NAVBAR_ITEMS = {
     "Blog" : "blog",
-	"Work": "work",
+    "Work": "work",
     "Now" : "now",
 };
